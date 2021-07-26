@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" *ngIf="loading">
+      <div class="d-flex justify-content-center pt-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only"></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12" *ngIf="error">
+      <div class="alert alert-danger" role="alert">
+        Error :(
+      </div>
+    </div>
+    <h2 class="text-center pt-5 pb-3" *ngIf="!loading">Characters of Rick and Morty</h2>
+      <div class="col-md-3 pb-3" *ngFor="let character of characters">
+        <div class="card" style="width: 18rem;">
+          <img src="{{ character.image }}" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">{{ character.name }}</h5>
+              <p class="card-text"> {{ character.status }}</p>
+          </div>
+        </div>
+      </div>     
+  </div>
+</div>
