@@ -21,6 +21,10 @@
               <p class="card-text"> {{ character.status }}</p>
           </div>
         </div>
-      </div>     
+      </div>  
+      <div class="col-md-12 text-center pb-5" *ngIf="!loading">
+        <button class="btn btn-outline-primary" type="submit" (click)="prevPage()" *ngIf="page > 1">Anterior</button>
+        <button class="btn btn-outline-primary ms-2" type="submit" (click)="nextPage()" *ngIf="page < 34">Siguiente</button>
+      </div>   
   </div>
 </div>
