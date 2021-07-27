@@ -15,7 +15,7 @@ export class CharactersComponent implements OnInit {
   constructor(private charactersService: CharactersService) { }
 
   ngOnInit(): void {
-    this.getData(1);
+    this.getData(this.page);
   }
 
   nextPage() {
